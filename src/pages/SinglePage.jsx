@@ -35,7 +35,7 @@ export const SinglePage=()=>{
     },[days])
    
 
-
+console.log(days);
 
 
     return(
@@ -154,7 +154,7 @@ select{
         justify-content: space-around;
        gap: 20px;
        width: 50%;
-       /* margin: auto; */
+      
     }
     .detailsDiv div img{
       width: 50%;
