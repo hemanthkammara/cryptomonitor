@@ -52,8 +52,8 @@ console.log(days);
 
             </div>
        
-        <div style={{display:"flex",flexDirection:"row"}}>
-        <div className="detailsDiv" style={{width:"30%"}}>
+        <div className="mainDiv" style={{display:"flex"}}>
+        <div className="detailsDiv" >
       
         <div>
         <img
@@ -76,9 +76,9 @@ console.log(days);
 
 
         </div>
-        <div style={{width:"65%"}}>
+        <div className="rightDiv" >
 
-    <div className="chartDiv" style={{width:"100%",margin:"auto",padding:"20px",borderRadius:"10px"}}>
+    <div className="chartDiv" style={{margin:"auto",borderRadius:"10px"}}>
 
     {historyData.length>0 && <Line
                 data={{
@@ -187,10 +187,48 @@ select{
        border-radius: 5px;
 
     }
+    .detailsDiv{
+            width: 30%;
+          }
 
     .chartDiv{
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        width:100%;
+        padding: 20px;
     }
 
+
+    .rightDiv{
+        width: 65%;
+    }
+    @media only screen and (max-width: 780px) {
+       
+        p{
+            width: 90%;
+        }
+          .mainDiv{
+            display: flex;
+            flex-direction: column;
+           
+          }
+
+          .detailsDiv{
+            width: 90%;
+            text-align: center;
+          }
+          .rightDiv{
+        width: 95%;
+       
+               }
+               .chartDiv{
+      
+        width:90%;
+        padding: 5px;
+    }
+
+    .buttonsDiv{
+        gap: 20px;
+    }
+    }
 
 `

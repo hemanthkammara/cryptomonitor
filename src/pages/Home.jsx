@@ -59,7 +59,7 @@ console.log(handleSearch())
       <table  >
         <thead>
            <tr className="trr">
-            <th style={{width:"7%"}}>coin</th>
+            <th >coin</th>
             <th></th>
             <th>price</th>
             <th>24h change</th>
@@ -146,6 +146,7 @@ export const DIV=styled.div`
     }
 
     table{
+        border: 1px solid red;
         border-collapse: collapse;
         width: 80%;
         margin: auto;
@@ -194,6 +195,21 @@ export const DIV=styled.div`
         border: none;
         background-color: white;
         border-radius: 25px;
+    }
+
+    @media only screen and (max-width: 780px) {
+        table{
+            width: 50%;
+            padding: 10px;
+        }
+        th{
+            padding: 10px;
+           
+        }
+        .navbar{
+            width: 100vw;
+            
+        }
     }
 
 `
